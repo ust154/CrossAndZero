@@ -6,6 +6,14 @@ public class CrossPlay {
                 field[i][j] = '*';
             }
         }
+        for (char[] i : field) {
+            for (char j : i) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
     }
 }
+
+
 
