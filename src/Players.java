@@ -1,24 +1,29 @@
-public class Players{
-  String name;
-  public Players (String name){
-  this.name = name;
-  }
-  
-  Players humanPlayer = new Players();
-  Players computerPlayer = new Players();
-  
-  BufferedReader reader = new BufferedReader(new InputStreamReader (System.in));
-  String nameOfPlayer = read.readLine();
-  
-  //player`s move in the game
-  void moveByPlayer(){
-  System.out.println("Make your move along the X axis!")
-  BufferedReader reader = new BufferedReader(new InputStreamReader (System.in));
-  int coordinateX = Integer.parseInt(reader.readLine());
-    
-  System.out.println("Make your move along the Y axis!")
-  BufferedReader reader = new BufferedReader(new InputStreamReader (System.in));
-  int coordinateY = Integer.parseInt(reader.readLine());
-    
-  }
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Players {
+    public static final String NAMEPC = "'Windows OS'";
+
+    public static void helloPlayers() {
+        System.out.println("Hello, player! My name is " + NAMEPC);
+        System.out.println("Now we start to play the game. Tell me your name.");
+    }
+
+    public static void creatPlayers() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String nameOfPlayer = reader.readLine();
+        Players humanPlayer = new Players();
+        Players computerPlayer = new Players();
+    }
+
+    //player`s move in the game
+    public static void moveByPlayer() throws IOException {
+        System.out.println("Make your move along the X axis!");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int coordinateX = Integer.parseInt(reader.readLine());
+        System.out.println("OK!");
+        System.out.println("Now, make your move along the Y axis!");
+        int coordinateY = Integer.parseInt(reader.readLine());
+    }
 }
