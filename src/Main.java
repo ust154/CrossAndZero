@@ -1,4 +1,4 @@
-public class CrossPlay {
+public class Main {
     public static void main(String[] args) {
         char[][] field = new char[4][4];
         for (int i = 0; i < field.length; i++) {
