@@ -1,22 +1,23 @@
 import java.io.IOException;
 
 public class Field {
-    public static final int SIZE = 2;
+    public static final int SIZE = 3;
 
     //method to create the playing field
-    public static void creatField()  {
-        Character[][] field = new Character[SIZE][SIZE];
-        for (int i = 0; i <= SIZE; i++) {
-            for (int j = 0; i <= SIZE; j++) {
+    public static void creatField() {
+        char[][] field = new char[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
                 field[i][j] = '.';
-                System.out.println("The playing field is created!");
             }
         }
+        System.out.println("The playing field is created! Look this field:");
         //show the field
-        for (Character[] i : field) {
-            for (char j : i)
+        for (char[] i : field) {
+            for (char j : i) {
                 System.out.print(j + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 }
