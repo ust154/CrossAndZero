@@ -6,5 +6,8 @@ public class Players{
   
   Players humanPlayer = new Players();
   Players computerPlayer = new Players();
+  
+  BufferedReader reader = new BufferedReader(new InputStreamReader (System.in));
+  String nameOfPlayer = read.readLine();
     
 }
