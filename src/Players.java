@@ -15,8 +15,6 @@ public class Players {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String nameOfPlayer = reader.readLine();
         System.out.println("Nice to meet you, " + nameOfPlayer + "!");
-        Players humanPlayer = new Players();
-        Players computerPlayer = new Players();
     }
 
     //player`s move in the game
