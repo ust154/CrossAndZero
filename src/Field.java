@@ -11,6 +11,10 @@ public class Field {
                 field[i][j] = '.';
             }
         }
+        showField(field);
+    }
+
+    public static void showField(char[][] field) {
         System.out.println("The playing field is created! Look this field:");
         //show the field
         for (char[] i : field) {
