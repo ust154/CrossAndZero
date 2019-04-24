@@ -16,6 +16,7 @@ public class Main {
         Field2.showField2();
         Field2.playerDoShoot();
         //Players.playerDoShoot();
+        Field2.computerDoShoot();
 
 
     }
