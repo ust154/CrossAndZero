@@ -21,9 +21,8 @@ public class Field2 {
         }
     }
 
+    //method to show the playing field
     public static void showField2() {
-        System.out.println("The playing field is created! Look this field:");
-        //show the field
         for (String[] i : field) {
             for (String j : i) {
                 System.out.print(j + " ");
@@ -53,12 +52,8 @@ public class Field2 {
         int coordinateY = Integer.parseInt(reader.readLine());
         field[coordinateX][coordinateY] = "X ";
         System.out.println("Look at your game move:");
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                System.out.print(field[i][j] + " ");
-            }
-            System.out.println(" ");
-        }
+
+        showField2();// show the field
     }
 
     /* computer`s move in the game */
@@ -72,12 +67,8 @@ public class Field2 {
             shootToShoot = false;
         }
         field[coordinateX2][coordinateY2] = "0 ";
-        for (String[] i : field) {
-            for (String j : i) {
-                System.out.print(j + " ");
-            }
-            System.out.println();
-        }
+
+        showField2(); // show the field
     }
 }
 
