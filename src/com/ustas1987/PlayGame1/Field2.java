@@ -56,6 +56,7 @@ public class Field2 {
         coordinateY = Integer.parseInt(reader.readLine());
         CheckTheGame.checkPlayerMove();
         field[coordinateX][coordinateY] = PLAYER_SIGN;
+        CheckTheGame.checkString(); // check the strings for wins
         System.out.println("Look at your game move:");
 
         showField2();// show the field
@@ -73,13 +74,13 @@ public class Field2 {
             coordinateY2 = (int) (Math.random() * 3);
         }
         field[coordinateX2][coordinateY2] = II_SIGN;
+        CheckTheGame.checkString(); // check the strings for wins
         showField2(); // show the field
     }
 
     public static void game() throws IOException {
         do {
             playerDoShoot();
-            CheckTheGame.checkString();
             computerDoShoot();
         } while (true);
     }
