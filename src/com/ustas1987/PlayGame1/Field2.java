@@ -79,6 +79,7 @@ public class Field2 {
     public static void game() throws IOException {
         do {
             playerDoShoot();
+            CheckTheGame.checkString();
             computerDoShoot();
         } while (true);
     }
