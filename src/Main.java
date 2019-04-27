@@ -14,9 +14,10 @@ public class Main {
         Field2.creatPlayers();
         Field2.creatField();
         Field2.showField2();
-        Field2.playerDoShoot();
+        //Field2.playerDoShoot();
         //Players.playerDoShoot();
-        Field2.computerDoShoot();
+        //Field2.computerDoShoot();
+        Field2.game();
 
 
     }

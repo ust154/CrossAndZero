@@ -5,9 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Field2 {
+    public static final String EMPTY_VALUE = "* ";
+    public static final String PLAYER_SIGN = "X ";
+    public static final String II_SIGN = "O ";
+    public static int coordinateX;
+    public static int coordinateY;
     public static int coordinateX2;
     public static int coordinateY2;
-    public static boolean shootToShoot;
     public static final int SIZE = 3;
     static String[][] field = new String[SIZE][SIZE];
     public static final String NAMEPC = "'Windows OS'";
@@ -16,7 +20,7 @@ public class Field2 {
     public static void creatField() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                field[i][j] = "* ";
+                field[i][j] = EMPTY_VALUE;
             }
         }
     }
@@ -46,11 +50,12 @@ public class Field2 {
     public static void playerDoShoot() throws IOException {
         System.out.println("Make your move along the X axis, FROM 0 TO 2!");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int coordinateX = Integer.parseInt(reader.readLine());
+        coordinateX = Integer.parseInt(reader.readLine());
         System.out.println("OK!");
         System.out.println("Now, make your move along the Y axis, FROM 0 TO 2!");
-        int coordinateY = Integer.parseInt(reader.readLine());
-        field[coordinateX][coordinateY] = "X ";
+        coordinateY = Integer.parseInt(reader.readLine());
+        CheckTheGame.checkPlayerMove();
+        field[coordinateX][coordinateY] = PLAYER_SIGN;
         System.out.println("Look at your game move:");
 
         showField2();// show the field
@@ -61,14 +66,21 @@ public class Field2 {
         System.out.println(NAMEPC + " maked his move:");
         coordinateX2 = (int) (Math.random() * 3);
         coordinateY2 = (int) (Math.random() * 3);
-        if (field[coordinateX2][coordinateY2] == "*") {
-            shootToShoot = true;
-        } else {
-            shootToShoot = false;
-        }
-        field[coordinateX2][coordinateY2] = "0 ";
 
+        while (field[coordinateX2][coordinateY2] == II_SIGN ||
+                field[coordinateX2][coordinateY2] == PLAYER_SIGN) {
+            coordinateX2 = (int) (Math.random() * 3);
+            coordinateY2 = (int) (Math.random() * 3);
+        }
+        field[coordinateX2][coordinateY2] = II_SIGN;
         showField2(); // show the field
+    }
+
+    public static void game() throws IOException {
+        do {
+            playerDoShoot();
+            computerDoShoot();
+        } while (true);
     }
 }
 
