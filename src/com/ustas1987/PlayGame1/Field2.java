@@ -13,6 +13,7 @@ public class Field2 {
     public static int coordinateX2;
     public static int coordinateY2;
     public static final int SIZE = 3;
+    public static boolean endTheGame;
     static String[][] field = new String[SIZE][SIZE];
     public static final String NAMEPC = "'Windows OS'";
 
@@ -35,15 +36,15 @@ public class Field2 {
         }
     }
 
-    public static void helloPlayers(String nameOfPlayer) {
-        System.out.println("Hello, player! My name is " + NAMEPC);
-        System.out.println("Now we start to play the game. Tell me your name.");
-    }
-
     public static void creatPlayers() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String nameOfPlayer = reader.readLine();
         System.out.println("Nice to meet you, " + nameOfPlayer + "!");
+    }
+
+    public static void helloPlayers(String nameOfPlayer) {
+        System.out.println("Hello, player! My name is " + NAMEPC);
+        System.out.println("Now we start to play the game. Tell me your name.");
     }
 
     /* player`s move in the game */
@@ -56,7 +57,6 @@ public class Field2 {
         coordinateY = Integer.parseInt(reader.readLine());
         CheckTheGame.checkPlayerMove();
         field[coordinateX][coordinateY] = PLAYER_SIGN;
-        CheckTheGame.checkString(); // check the strings for wins
         System.out.println("Look at your game move:");
 
         showField2();// show the field
@@ -74,18 +74,28 @@ public class Field2 {
             coordinateY2 = (int) (Math.random() * 3);
         }
         field[coordinateX2][coordinateY2] = II_SIGN;
-        CheckTheGame.checkString(); // check the strings for wins
         showField2(); // show the field
     }
 
     public static void game() throws IOException {
         do {
             playerDoShoot();
+            CheckTheGame.checkPlayerLines(); // check the strings for wins
+            if (CheckTheGame.lineChek) {
+                System.out.println("GAME OVER!!! Player won");
+                endTheGame = true;
+                break;
+            }
             computerDoShoot();
-        } while (true);
+            CheckTheGame.checkComputerLines(); // check the strings for wins
+            if (CheckTheGame.lineChek) {
+                System.out.println("GAME OVER!!! 'Windows OS' won");
+                endTheGame = true;
+                break;
+            }
+        } while (!endTheGame);
     }
 }
-
 
 
 
