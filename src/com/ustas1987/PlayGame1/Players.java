@@ -1,3 +1,5 @@
+package com.ustas1987.PlayGame1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

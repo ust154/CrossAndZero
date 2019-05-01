@@ -2,7 +2,7 @@ package com.ustas1987.PlayGame1;
 
 import java.io.IOException;
 
-import static com.ustas1987.PlayGame1.Field2.*;
+import static com.ustas1987.PlayGame1.Field.*;
 
 public class CheckTheGame {
     public static boolean lineChek;

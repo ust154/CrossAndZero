@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Field2 {
+public class Field {
     public static final String EMPTY_VALUE = "* ";
     public static final String PLAYER_SIGN = "X ";
     public static final String II_SIGN = "O ";
