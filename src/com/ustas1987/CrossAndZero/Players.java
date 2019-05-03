@@ -1,4 +1,4 @@
-package com.ustas1987.PlayGame1;
+package com.ustas1987.CrossAndZero;
 
 import java.io.BufferedReader;
 import java.io.IOException;

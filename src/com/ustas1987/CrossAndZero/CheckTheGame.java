@@ -1,8 +1,8 @@
-package com.ustas1987.PlayGame1;
+package com.ustas1987.CrossAndZero;
 
 import java.io.IOException;
 
-import static com.ustas1987.PlayGame1.Field.*;
+import static com.ustas1987.CrossAndZero.Field.*;
 
 public class CheckTheGame {
     public static boolean lineChek;
