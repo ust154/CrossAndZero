@@ -18,13 +18,13 @@ public class FlightControlCenter {
     }
 
     void check() {
-        System.out.println("Пилот, доложить о готовности!");
+        System.out.println("Космопорт " + nameOfFlightControlCenter + " : Пилот, доложить о готовности!");
         currentPilot.startThePilot();
         currentSpaceShip.readyToStart();
     }
 
     void launch() {
-        System.out.println("К запуску готовы! Дать обратный отсчет!");
+        System.out.println("Космопорт " + nameOfFlightControlCenter + " : К запуску готовы! Дать обратный отсчет!");
         for (int i = 10; i != 0; i--) {
             System.out.println(i);
         }

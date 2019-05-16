@@ -7,19 +7,14 @@ public class Main {
         SpaceShip spaceShip = new SpaceShip("'VOSTOK'");
         FlightControlCenter controlCenter = new FlightControlCenter("ЦУП № 1");
 
-        spaceShip.setPilot(pilot);//посадил пилота в корабль
-        //pilot.startThePilot();//метод работает!
-        port.setSpaceShip(spaceShip);//добавил в космопорт корабль
-        //spaceShip.readyToStart();//метод работает!
-        port.setFlightControlCenter(controlCenter);//добавил ЦУП в космодром
-        controlCenter.setCurrentSpaceShip(spaceShip);//добавил в ЦУП корабль
+        port.setFlightControlCenter(controlCenter);//в космопорт добавил ЦУП
+        port.setSpaceShip(spaceShip);// в космопорт добавил корабль
+        controlCenter.setCurrentSpaceShip(spaceShip);//в ЦУП добавил  корабль
+        spaceShip.setPilot(pilot);//в корабль посадил пилота
+        controlCenter.setCurrentPilot(pilot);//добавил в космопорт пилота
+        spaceShip.setCurrentControlCenter(controlCenter);//в корабль добавил ЦУП
+
+        controlCenter.check();
         controlCenter.launch();
-
-
-
-
-
-        //currentControlCenter.currentPilot.startThePilot();
-
     }
 }

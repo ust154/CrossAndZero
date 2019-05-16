@@ -8,6 +8,6 @@ public class Pilot {
     }
 
     void startThePilot() {
-        System.out.println("Пилот " + nameOfPilot + " к полету готов!");
+        System.out.println("Пилот : " + nameOfPilot + " к полету готов!");
     }
 }

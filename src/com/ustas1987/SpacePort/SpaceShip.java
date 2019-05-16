@@ -3,9 +3,7 @@ package com.ustas1987.SpacePort;
 public class SpaceShip {
     String nameOfSpaceShip;
     Pilot currentPilot;
-    //String nameOfPilot;
     FlightControlCenter currentControlCenter;
-    SpaceShip spaceShip;
 
     public SpaceShip(String nameOfSpaceShip) {
         this.nameOfSpaceShip = nameOfSpaceShip;
@@ -20,11 +18,12 @@ public class SpaceShip {
     }
 
     void readyToStart() {
-        System.out.println("Пилот " + currentPilot.nameOfPilot + " сказал: " + " - Корабль " + nameOfSpaceShip + " к запуску готов!");
+        System.out.println("Пилот : Корабль " + nameOfSpaceShip + " к запуску готов!");
     }
 
     void flightToTheMoon() {
-        System.out.println(currentControlCenter + " совершил запуск корабля " + nameOfSpaceShip);
-        System.out.println(nameOfSpaceShip + " вышел в космос с пилотом " + currentPilot.nameOfPilot + " на борту");
+        System.out.println(currentControlCenter.nameOfFlightControlCenter + " совершил запуск корабля " + nameOfSpaceShip);
+        System.out.println(nameOfSpaceShip + " вышел в космос с пилотом " + currentPilot.nameOfPilot + " на борту.");
+        System.out.println("УРА! ТОВАРИЩИ!!!");
     }
 }
