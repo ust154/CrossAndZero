@@ -7,6 +7,7 @@ public class Main {
         SpacePort port = new SpacePort("Байкрнур");
         SpaceShip spaceShip = new SpaceShip("'VOSTOK'");
         FlightControlCenter controlCenter = new FlightControlCenter("ЦУП № 1");
+        Rocket rocket = new Rocket("'Сатурн'");
 
         port.setFlightControlCenter(controlCenter);//в космопорт добавил ЦУП
         port.setSpaceShip(spaceShip);// в космопорт добавил корабль
@@ -14,6 +15,8 @@ public class Main {
         spaceShip.setPilot(pilot);//в корабль посадил пилота
         controlCenter.setCurrentPilot(pilot);//добавил в космопорт пилота
         spaceShip.setCurrentControlCenter(controlCenter);//в корабль добавил ЦУП
+        port.setRocket(rocket);//в порт добавил рокету
+        controlCenter.setCurrentRocket(rocket);
 
         controlCenter.check();
         controlCenter.launch();

@@ -4,16 +4,25 @@ public class FlightControlCenter {
     SpaceShip currentSpaceShip;
     Pilot currentPilot;
     String nameOfFlightControlCenter;
+    Rocket currentRocket;
 
-    public void setCurrentPilot(Pilot currentPilot) {
+    public void setCurrentRocket(Rocket currentRocket)
+    {
+        this.currentRocket = currentRocket;
+    }
+
+    public void setCurrentPilot(Pilot currentPilot)
+    {
         this.currentPilot = currentPilot;
     }
 
-    public void setCurrentSpaceShip(SpaceShip currentSpaceShip) {
+    public void setCurrentSpaceShip(SpaceShip currentSpaceShip)
+    {
         this.currentSpaceShip = currentSpaceShip;
     }
 
-    public FlightControlCenter(String name) {
+    public FlightControlCenter(String name)
+    {
         this.nameOfFlightControlCenter = name;
     }
 
@@ -22,6 +31,7 @@ public class FlightControlCenter {
         System.out.println("Космопорт " + nameOfFlightControlCenter + " : Пилот, доложить о готовности!");
         currentPilot.startThePilot();
         currentSpaceShip.readyToStart();
+        currentRocket.readyToStart();
     }
 
     void launch()
@@ -32,5 +42,6 @@ public class FlightControlCenter {
         }
         System.out.println("Запуск!!!");
         currentSpaceShip.flightToTheMoon();
+        currentRocket.flightToTheMoon();
     }
 }
