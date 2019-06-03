@@ -7,7 +7,8 @@ public class Pilot {
         this.nameOfPilot = name;
     }
 
-    void startThePilot() {
+    void startThePilot()
+    {
         System.out.println("Пилот : " + nameOfPilot + " к полету готов!");
     }
 }

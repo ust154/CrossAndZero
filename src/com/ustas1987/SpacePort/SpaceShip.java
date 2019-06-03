@@ -17,11 +17,13 @@ public class SpaceShip {
         this.currentPilot = pilot;
     }
 
-    void readyToStart() {
+    void readyToStart()
+    {
         System.out.println("Пилот : Корабль " + nameOfSpaceShip + " к запуску готов!");
     }
 
-    void flightToTheMoon() {
+    void flightToTheMoon()
+    {
         System.out.println(currentControlCenter.nameOfFlightControlCenter + " совершил запуск корабля " + nameOfSpaceShip);
         System.out.println(nameOfSpaceShip + " вышел в космос с пилотом " + currentPilot.nameOfPilot + " на борту.");
         System.out.println("УРА! ТОВАРИЩИ!!!");
