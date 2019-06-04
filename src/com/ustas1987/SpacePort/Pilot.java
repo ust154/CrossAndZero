@@ -3,7 +3,8 @@ package com.ustas1987.SpacePort;
 public class Pilot {
     String nameOfPilot;
 
-    public Pilot(String name) {
+    public Pilot(String name)
+    {
         this.nameOfPilot = name;
     }
 

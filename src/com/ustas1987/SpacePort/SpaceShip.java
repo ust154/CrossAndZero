@@ -1,15 +1,17 @@
 package com.ustas1987.SpacePort;
 
-public class SpaceShip implements Flyable {
+public class SpaceShip  implements Flyable{
     String nameOfSpaceShip;
     Pilot currentPilot;
     FlightControlCenter currentControlCenter;
 
-    public SpaceShip(String nameOfSpaceShip) {
+    public SpaceShip(String nameOfSpaceShip)
+    {
         this.nameOfSpaceShip = nameOfSpaceShip;
     }
 
-    public void setCurrentControlCenter(FlightControlCenter currentControlCenter) {
+    public void setCurrentControlCenter(FlightControlCenter currentControlCenter)
+    {
         this.currentControlCenter = currentControlCenter;
     }
 
@@ -19,7 +21,7 @@ public class SpaceShip implements Flyable {
     }
 
     @Override
-    public void readyToStart()
+     public void readyToStart()
     {
         System.out.println("Пилот : Корабль " + nameOfSpaceShip + " к запуску готов!");
     }

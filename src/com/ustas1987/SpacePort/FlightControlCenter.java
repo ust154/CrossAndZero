@@ -1,24 +1,18 @@
 package com.ustas1987.SpacePort;
 
 public class FlightControlCenter {
-    SpaceShip currentSpaceShip;
+    Flyable currentFlyingObject;
     Pilot currentPilot;
     String nameOfFlightControlCenter;
-    Rocket currentRocket;
-
-    public void setCurrentRocket(Rocket currentRocket)
-    {
-        this.currentRocket = currentRocket;
-    }
 
     public void setCurrentPilot(Pilot currentPilot)
     {
         this.currentPilot = currentPilot;
     }
 
-    public void setCurrentSpaceShip(SpaceShip currentSpaceShip)
+    public void setCurrentFlyable(Flyable currentSpaceShip)
     {
-        this.currentSpaceShip = currentSpaceShip;
+        this.currentFlyingObject = currentSpaceShip;
     }
 
     public FlightControlCenter(String name)
@@ -30,18 +24,16 @@ public class FlightControlCenter {
     {
         System.out.println("Космопорт " + nameOfFlightControlCenter + " : Пилот, доложить о готовности!");
         currentPilot.startThePilot();
-        currentSpaceShip.readyToStart();
-        currentRocket.readyToStart();
     }
 
     void launch()
     {
         System.out.println("Космопорт " + nameOfFlightControlCenter + " : К запуску готовы! Дать обратный отсчет!");
-        for (int i = 10; i != 0; i--) {
+        for (int i = 10; i >= 0; i--)
+        {
             System.out.println(i);
         }
         System.out.println("Запуск!!!");
-        currentSpaceShip.flightToTheMoon();
-        currentRocket.flightToTheMoon();
+        currentFlyingObject.flightToTheMoon();
     }
 }
