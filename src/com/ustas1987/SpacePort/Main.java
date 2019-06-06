@@ -26,14 +26,12 @@ public class Main {
 
         port.flightControlCenter.setCurrentFlyable(new Flyable() {
             @Override
-            public void readyToStart()
-            {
+            public void readyToStart() {
                 System.out.println("НЛО котов к запуску");
             }
 
             @Override
-            public void flightToTheMoon()
-            {
+            public void flightToTheMoon() {
                 System.out.println("НЛО запущен!!!");
             }
         });

@@ -9,13 +9,11 @@ public class SpacePort {
         this.nameOfSpacePort = nameOfSpacePort;
     }
 
-    public void setFlightControlCenter(FlightControlCenter flightControlCenter)
-    {
+    public void setFlightControlCenter(FlightControlCenter flightControlCenter) {
         this.flightControlCenter = flightControlCenter;
     }
 
-    public void setRocket(Rocket rocket)
-    {
+    public void setRocket(Rocket rocket) {
         this.rocket = rocket;
     }
 }
